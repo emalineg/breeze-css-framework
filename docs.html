@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>breeze framework documentation</title>
+    <link rel="stylesheet" href="/breeze.css">
+    <style>
+        /* Menu Styles */
+        .breeze-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 100vh;
+            background-color: var(--breeze-primary);
+            color: white;
+            padding: var(--spacing-md);
+            box-shadow: var(--shadow-md);
+            overflow-y: auto;
+        }
+        .breeze-menu ul {
+            list-style: none;
+        }
+        .breeze-menu li {
+            margin-bottom: var(--spacing-sm);
+        }
+        .breeze-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: var(--font-size-base);
+        }
+        .breeze-menu a:hover {
+            text-decoration: underline;
+        }
+
+        /* Page Layout Adjustments */
+        .breeze-content {
+            margin-left: 220px; /* Leave space for the menu */
+            padding: var(--spacing-lg);
+        }
+
+        /* Smooth Scrolling for Anchor Links */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="breeze-styles">
+
+    <!-- Sidebar Menu -->
+    <aside class="breeze-menu">
+        <a href="/index.html"><h1>breeze</h1></a>
+        <h2 class="dosis-bold text-md">menu</h2>
+        <ul>
+            <li><a href="#typography">typography</a></li>
+            <li><a href="#buttons">buttons</a></li>
+            <li><a href="#grid-layout">grid layout</a></li>
+            <li><a href="#cards">cards</a></li>
+            <li><a href="#navbar">navbar</a></li>
+            <li><a href="#inline">inline code</a></li>
+            <li><a href="#code-block">code block </a></li>
+            <li><a href="#shadows-and-radius">shadows & border radius</a></li>
+            <li><a href="#responsive-design">responsive design</a></li>
+            <li><a href="#footer">footer</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="breeze-content">
+
+        <!-- Introduction Section -->
+        <header id="introduction" style="text-align: center; padding: var(--spacing-lg); background-color: var(--breeze-accent); color: white;">
+            <h1 class="dosis-bold text-xl">breeze framework documentation</h1>
+            <p class="text-md text-muted">explore all available styles and components in the framework</p>
+        </header>
+
+        <!-- Typography Section -->
+        <section id="typography" style="padding: var(--spacing-lg);">
+            <h2 class="dosis-bold text-lg">typography</h2>
+            <p class="text-sm">this is small text (.text-sm).</p>
+            <p class="text-md">this is medium text (.text-md).</p>
+            <p class="text-lg">this is large text (.text-lg).</p>
+            <p class="text-xl">this is extra-large text (.text-xl).</p>
+            <p class="dosis-light">this is light font weight using dosis (.dosis-light).</p>
+            <p class="dosis-regular">this is regular font weight using dosis (.dosis-regular).</p>
+            <p class="dosis-bold">this is bold font weight using dosis (.dosis-bold).</p>
+        </section>
+
+        <!-- Buttons Section -->
+        <section id="buttons" style="padding: var(--spacing-lg);">
+            <h2 class="dosis-bold text-lg">buttons</h2>
+            <div style="display: flex; gap: var(--spacing-md);">
+                <button class="breeze-btn">primary button</button>
+                <button class="breeze-btn-outline">outline button</button>
+            </div>
+        </section>
+
+        <!-- Grid Layout Section -->
+        <section id="grid-layout" style="padding: var(--spacing-lg);">
+            <h2 class="dosis-bold text-lg">grid layout</h2>
+            <p>the grid system supports layouts with 2, 3, or 4 columns. on smaller screens, grids collapse into a single column.</p>
+            <div class="grid grid-2" style="margin-bottom: var(--spacing-md);">
+                <div class="breeze-card">grid item 1</div>
+                <div class="breeze-card">grid item 2</div>
+            </div>
+            <div class="grid grid-3" style="margin-bottom: var(--spacing-md);">
+                <div class="breeze-card">grid item 1</div>
+                <div class="breeze-card">grid item 2</div>
+                <div class="breeze-card">grid item 3</div>
+            </div>
+            <div class="grid grid-4">
+                <div class="breeze-card">grid item 1</div>
+                <div class="breeze-card">grid item 2</div>
+                <div class="breeze-card">grid item 3</div>
+                <div class="breeze-card">grid item 4</div>
+            </div>
+        </section>
+
+        <!-- Cards Section -->
+        <section id="cards" style="padding: var(--spacing-lg);">
+            <h2 class="dosis-bold text-lg">cards</h2>
+            <div class="breeze-card">
+                <h3 class="dosis-regular">card title</h3>
+                <p>this is a simple card component. add content here to display in the card.</p>
+                <button class="breeze-btn">learn more</button>
+            </div>
+        </section>
+
+        <!-- Navbar Section -->
+        <section id="breeze-navbar" style="padding: var(--spacing-lg);">
+            <h2 class="dosis-bold text-lg">navbar</h2>
+            <nav class="breeze-navbar">
+                <h1>navbar</h1>
+                <div>
+                    <a href="#">link 1</a>
+                    <a href="#">link 2</a>
+                    <a href="#">link 3</a>
+                </div>
+            </nav>
+            <p style="margin-top: var(--spacing-md);">the navbar component provides a flexible layout for a responsive header.</p>
+        </section>
+
+        <section id="inline" style="padding: var(--spacing-lg);">
+            <h2 class="dosis-bold text-lg">code blocks: inline</h2>
+            <!-- inline code -->
+            <p>
+                use the <code>&lt;code&gt;</code> element to highlight inline code like <code>var x = 10;</code>.
+            </p>
+        </section>
+
+        <section id="code-block" style="padding: var(--spacing-lg);">
+            <h2 class="dosis-bold text-lg">code blocks: block-level</h2>
+            <!-- code block -->
+             <p> use the <code>&lt;pre&gt;</code> <code>&lt;code&gt;</code> elements together to create a code block </p>
+            <pre><code>
+                // this is a simple javascript example
+                function greet(name) {
+                console.log(`hello, ${name}!`);
+                }
+                greet('breeze');
+            </code></pre>
+        </section>
+
+        <!-- Shadows and Border Radius Section -->
+        <section id="shadows-and-radius" style="padding: var(--spacing-lg);">
+            <h2 class="dosis-bold text-lg">shadows & border radius</h2>
+            <div style="display: flex; gap: var(--spacing-md);">
+                <div style="background: white; padding: var(--spacing-md); border-radius: var(--radius); box-shadow: var(--shadow-sm);">
+                    small shadow
+                </div>
+                <div style="background: white; padding: var(--spacing-md); border-radius: var(--radius); box-shadow: var(--shadow-md);">
+                    medium shadow
+                </div>
+            </div>
+        </section>
+
+        <!-- Responsive Design Section -->
+        <section id="responsive-design" style="padding: var(--spacing-lg);">
+            <h2 class="dosis-bold text-lg">responsive design</h2>
+            <p>the grid system and other styles adapt to smaller screens. resize the browser window to see the changes.</p>
+        </section>
+
+          <!-- Footer Section -->
+          <section id="footer" style="padding: var(--spacing-lg);">
+            <h2 class="dosis-bold text-lg">footer</h2>
+            <footer class="breeze-footer">
+                <p>© 2024 breeze framework. all rights reserved.</p>
+                <a href="#">privacy policy</a>
+            </footer>
+        </section>
+
+    </div>
+</body>
+</html>
